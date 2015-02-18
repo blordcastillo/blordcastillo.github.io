@@ -1,7 +1,7 @@
 #How to make (and load) your GeoJSON  
   
 ##FME GeoJSON Writer  
-![FME](http://www.safe.com/inc/images/desktop/formats2.png "FME from Safe Software")  
+[![FME](http://www.safe.com/inc/images/desktop/formats2.png "FME from Safe Software")](http://www.safe.com/fme)  
   
 ##Export out of ArcGIS with [Arc2Earth](http://www.arc2earth.com/)  
   
