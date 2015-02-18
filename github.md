@@ -5,7 +5,13 @@ Other users can create copies of your code, and even push back changes that can 
 ##Social Coding
 The ability to readily share your own code and contribute to other people's projects led to the phenomena of social coding. Social coding is nothing more than software development that emphasizes collaboration, particularly informal collaboration.  
 But not everything on GitHub is "code".
-
-##What is GeoJSON  
   
-##GeoJSON on GitHub
+###Wikis  
+[Health Hack Weekend](https://github.com/OpenDataSTL/health-hack-weekend/wiki)  
+[Draft Open Data Policy for St Louis County](https://github.com/schwuw/openDataPolicy_stlco/wiki)  
+[OpenDataSTL Strategic Plan](https://github.com/OpenDataSTL/StrategicPlan2015/blob/master/DraftPlan.md)  
+[CSV datasets](https://github.com/OpenDataSTL/stl-datasets/blob/master/CountyFY2013WarrantsByCity.csv)  
+[More Examples](https://github.com/OpenDataSTL/stl-datasets)  
+  
+##And then there is [GeoJSON](https://raw.githubusercontent.com/OpenDataSTL/stl-datasets/master/courts.geojson)  
+[How GeoJSON looks on GitHub](https://github.com/OpenDataSTL/stl-datasets/blob/master/courts.geojson)  
