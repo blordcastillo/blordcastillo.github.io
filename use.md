@@ -16,7 +16,8 @@ Some of these uses include:
 * Work with it in [QGIS](http://gis.stackexchange.com/questions/30427/open-a-geojson-file-with-qgis)  
 * (ArcGIS Desktop support is expected soon.)
   
-###And upload to the cloud (yes, technically GitHub is "the cloud")!  
+###And upload to the cloud!
+(Yes, technically GitHub is "the cloud" too.)  
 * [To ArcGIS Online](http://doc.arcgis.com/en/arcgis-online/share-maps/publish-features.htm)  
 * [To CartoDB](http://blog.cartodb.com/github-geojson-and-cartodb/)  
 * [To MapBox](https://www.mapbox.com/mapbox.js/example/v1.0.0/load-geojson/)  
