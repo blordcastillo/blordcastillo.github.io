@@ -1,0 +1,135 @@
+<!DOCTYPE html><html><head><title></title><meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" /><style type='text/css'>
+body {
+  font-family: 'Helvetica';
+  letter-spacing:-5px;
+  background:#000;
+  background-size:100%;
+  color:#fff;
+  margin:0;
+  padding:0;
+  font-weight:bold;
+}
+
+h1, h2, h3, p {
+  margin:0;
+}
+
+em, a {
+  font-style:normal;
+  color:#8dbd0c;
+}
+
+a {
+  background: #34d0e7;
+  color:#000;
+  text-decoration:none;
+}
+
+img {
+  width:100%;
+}
+
+div {
+  cursor:pointer;
+  cursor:hand;
+  position:absolute;
+  top:0;
+  left:0;
+}
+</style><script type='text/javascript'>
+window.onload = function() {
+    var s = document.getElementsByTagName('div'), cur = 0;
+    if (!s) return;
+    function go(n) {
+        cur = n;
+        var i = 1e3, e = s[n];
+        for (var k = 0; k < s.length; k++) s[k].style.display = 'none';
+        e.style.display = 'inline';
+        e.style.fontSize = i + 'px';
+        if (e.firstChild.nodeName === 'IMG') {
+            document.body.style.backgroundImage = 'url(' + e.firstChild.src + ')';
+            e.firstChild.style.display = 'none';
+        } else {
+            document.body.style.backgroundImage = '';
+            document.body.style.backgroundColor = e.style.backgroundColor;
+        }
+        while (
+            e.offsetWidth > window.innerWidth ||
+            e.offsetHeight > window.innerHeight) {
+            e.style.fontSize = (i -= 10) + 'px';
+            if (i < 0) break;
+        }
+        e.style.marginTop = ((window.innerHeight - e.offsetHeight) / 2) + 'px';
+        if (window.location.hash !== n) window.location.hash = n;
+        document.title = e.textContent || e.innerText;
+    }
+    document.onclick = function() {
+        go(++cur % (s.length));
+    };
+    document.onkeydown = function(e) {
+        (e.which === 39) && go(Math.min(s.length - 1, ++cur));
+        (e.which === 37) && go(Math.max(0, --cur));
+    };
+    function parse_hash() {
+        return Math.max(Math.min(
+            s.length - 1,
+            parseInt(window.location.hash.substring(1), 10)), 0);
+    }
+    if (window.location.hash) cur = parse_hash() || cur;
+    window.onhashchange = function() {
+        var c = parse_hash();
+        if (c !== cur) go(c);
+    };
+
+    go(cur);
+};
+</script></head><body>
+<div><em>OSM</em> 101 <a href="http://sta.mn/y9d">sta.mn/y9d</a></div>
+<div>Housekeeping!<br>You can follow along here: <a href="http://sta.mn/y9d">sta.mn/y9d</a>. Links are in blue boxes, <em>green</em> is just emphasis. Change slides w/ arrow keys. You can comment and edit on <a href="https://github.com/maptime/osm-101/">github!</a></div>
+<div style="color: black"><img src="sf.png">What is OpenStreetMap?</div>
+<div style="color: black"><img src="sf.png">OpenStreetMap is the <a href="https://www.google.com/search?q=%22wikipedia+of+maps%22">"Wikipedia of maps"</a></div>
+<div style="color: black"><img src="sf.png">Anyone (like YOU!) can edit OSM</div>
+<div style="color: black"><img src="signup.png">So, let's sign up <a href="https://www.openstreetmap.org/user/new">now!</a></div>
+<div>Where to learn more: <a href="http://learnosm.org">www.learnosm.org</a> <a href="http://wiki.openstreetmap.org">wiki.osm.org</a> <a href="http://help.openstreetmap.org">help.osm.org</a></div>
+<div>To learn how to add any kind of thing to the map: <a href="http://wiki.openstreetmap.org/wiki/Map_Features">wiki.osm.org / wiki / Map_Features</a></div>
+<div>Am I doing it the <em>right way?</em> Read about <a href="http://wiki.openstreetmap.org/wiki/Good_practice">wiki.osm.org / wiki / Good_practice</a></div>
+<div>Let's get started!</div>
+<div>Two ways to edit OSM: web editor <a href="https://wiki.openstreetmap.org/wiki/ID">iD</a> or advanced editor <a href="https://josm.openstreetmap.de/">JOSM</a></div>
+<div style="color: black"><img src="sf_cityhall.png">iD: just click edit up in the corner ↖︎</div>
+<div style="color: black"><img src="sf_cityhall_editing.png"></div>
+<div><img src="sf_cityhall_editing_josm.png"><em>JOSM</em></div>
+
+
+<div style="color: black"><img src="sf_layers.png">Look: layers! ⬈</div>
+<div><img src="sf_layers_bikemap.png"></div>
+<div><img src="sf_layers_transit.png"></div>
+<div style="color: black"><img src="sf_layers_notes.png">Look: notes!⬊</div>
+<div><img src="sf_layers_notes_open.png"></div>
+
+<div>data model: nodes / ways / relations <img src="node-way-relation.png"></div>
+
+<div>OK! But what should I edit first? <em>Suggestions:</em></div>
+<div>Trace some buildings</div>
+<div>Add some POIs (points of interest)</div>
+<div>Play <a href="http://maproulette.org">MapRoulette</a></div>
+<div><img src="maproulette.png"></div>
+<div>Do some <a href="http://tasks.hotosm.org/">HOT tasks</a> (Humanitarian OSM Team)</div>
+<div><img src="hot.png"></div>
+<div><img src="pushpin.png">Get outside!</div>
+<div><img src="fieldpapers.png"></div>
+<div><img src="field-paper-3.png"></div>
+<div>What not to do:</div>
+<div>Main rule of thumb: no copying from <span style="color:blue">G</span><span style="color:red">o</span><span style="color:yellow">o</span><span style="color:blue">g</span><span style="color:green">l</span><span style="color:red">e</span> products!</div>
+
+<div>OSM is licensed under the Open Database License: <a href="http://opendatacommons.org/licenses/odbl/">ODbL</a></div>
+<div>More on that another time...</div>
+<div>Advanced stuff: (Quality Assurance tools)</div>
+<div style="color: black"><img src="itoworld_export_users.png">ITO World <a href="http://www.itoworld.com/static/openstreetmap_tools/osm_mapper.html">OSM Mapper</a></div>
+<div style="color: black"><img src="itoworld_export_lastedited.png"></div>
+<div><img src="itoworld_tiger_reviewed.png"></div>
+<div><img src="qa.poole.noaddress.png"></div>
+<div>I've got some data, can I load it into OSM?</div>
+<div>That's also complicated... Read more here: <a href="http://wiki.openstreetmap.org/wiki/Import/Guidelines">wiki.osm.org / wiki / Import / Guidelines</a></div>
+<div>Get feedback before you import anything!</div>
+<div>Now get out there and start mapping!</div>
+<div>Presentation made with <a href="http://www.macwright.org/big/">big</a></div>
